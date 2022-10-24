@@ -1,0 +1,1 @@
+![image](./Linked%20List%20(1).png)
