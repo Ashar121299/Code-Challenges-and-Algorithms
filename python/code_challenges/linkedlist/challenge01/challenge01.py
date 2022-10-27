@@ -5,9 +5,10 @@ def delete(node):
     deleted it by move pointer from previous node to 
     the next one
     '''
-    nextNode = node.next
-    node.value = nextNode.value
-    node.next = nextNode.next
+    temp = node.next
+    node.value = temp.value
+    node.next = temp.next
+    temp.next=None
 
 
 
