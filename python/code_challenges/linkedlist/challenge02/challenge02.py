@@ -1,5 +1,7 @@
 # Write here the code challenge solution
-
+import math
+from os import curdir
+from pty import slave_open
     
 class Node:
     def __init__(self,value):
@@ -24,25 +26,41 @@ class LinkedList:
             current.next = node
     def middle_node (self):
         '''
-        This function print linked list from middle
-        node up to end 
-        
+        This function find the middle node 
         '''
-        count=0
+        slow=self.head
+        fast=self.head
+        while fast:
+            fast=fast.next 
+            if fast:
+                fast=fast.next
+            else:
+                break
+            slow=slow.next
+        return slow
+
+
+    def print_middle(self,slow):
+        result=''
+
+        while slow is not None:
+            result+=f'{slow.value}--> '
+            slow=slow.next
+        result+='None'
+        
+        return result
+
+
+
+        
+    def print_All(self):
         nodes=[]
         current = self.head
-        while current:
-            count+=1
-            current=current.next
-            
-        current = self.head
-        for i in range (count//2):
-            current=current.next
-        
         while current is not None:
             nodes.append(current.value)
-            current=current.next
+            current = current.next
         return nodes
+            
 
 
         
@@ -60,7 +78,9 @@ if __name__=='__main__':
     linkedList.append(node5)
     node6 = Node(6)
     linkedList.append(node6)
-    print(linkedList.middle_node())
+    
+    print(linkedList.print_middle(linkedList.middle_node()))
+
 
 
 

@@ -16,8 +16,8 @@ def test_case1():
     linkedList.append(node5)
     node6 = Node(6)
     linkedList.append(node6)
-    actual=linkedList.middle_node()
-    expected=[4, 5, 6]
+    actual=linkedList.print_middle(linkedList.middle_node())
+    expected="4--> 5--> 6--> None"
     assert actual==expected
 
 def test_case2():
@@ -32,6 +32,6 @@ def test_case2():
     linkedList.append(node4)
     node5 = Node(5)
     linkedList.append(node5)
-    actual=linkedList.middle_node()
-    expected=[3, 4, 5]
+    actual=linkedList.print_middle(linkedList.middle_node())
+    expected="3--> 4--> 5--> None"
     assert actual==expected

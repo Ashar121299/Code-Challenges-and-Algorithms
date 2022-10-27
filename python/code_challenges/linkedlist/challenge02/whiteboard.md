@@ -1,1 +1,1 @@
-![image](./null.png)
+![image](./middle%20node.png)
