@@ -67,3 +67,22 @@ def test_case4():
     actual=linkl.print_Nth(linkl.remove_nth_node(linkl.head,5))
     expected='2--> 3--> 4--> 5--> None'
     assert actual == expected
+def test_case5():
+
+    linkl=LinkedList()
+    node1 = Node(1)
+    linkl.append(node1)
+    actual=linkl.print_Nth(linkl.remove_nth_node(linkl.head,1))
+    expected='None'
+    assert actual == expected
+def test_case6():
+
+    linkl=LinkedList()
+    node1 = Node(1)
+    linkl.append(node1)
+    node2 = Node(2)
+    linkl.append(node2)
+    actual=linkl.print_Nth(linkl.remove_nth_node(linkl.head,1))
+    expected='1--> None'
+    assert actual == expected
+
