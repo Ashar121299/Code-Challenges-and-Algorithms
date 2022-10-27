@@ -1,1 +1,1 @@
-![image](./Linked%20List%20(1).png)
+![image](./delete%20node.png)
