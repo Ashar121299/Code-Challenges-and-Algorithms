@@ -22,27 +22,6 @@ class LinkedList:
             current.next = node
 
 
-    def middle_node (self):
-        '''
-        This function print linked list from middle
-        node up to end 
-        '''
-        count=0
-        nodes=[]
-        current = self.head
-        while current:
-            count+=1
-            current=current.next
-            
-        current = self.head
-        for i in range (count//2):
-            current=current.next
-        
-        while current is not None:
-            nodes.append(current.value)
-            current=current.next
-        return nodes
-
     def remove_nth_node(self,head,n):
         '''
         This function return linked list after remove the 
@@ -65,6 +44,17 @@ class LinkedList:
  
         slow.next = slow.next.next
         return head
+    
+    def print_Nth(self,head):
+        
+        result=''
+
+        while head is not None:
+            result+=f'{head.value}--> '
+            head=head.next
+        result+='None'
+        
+        return result
 
         
         
@@ -74,7 +64,7 @@ class LinkedList:
         while current is not None:
             nodes.append(current.value)
             current=current.next
-        print(nodes)
+        return nodes
 
 
 
@@ -95,5 +85,5 @@ if __name__=='__main__':
     linkedList.append(node4)
     node5 = Node(5)
     linkedList.append(node5)
-    linkedList.remove_nth_node(linkedList.head,2)
-    linkedList.print_All()
+    print(linkedList.print_Nth(linkedList.remove_nth_node(linkedList.head,2)))
+    
