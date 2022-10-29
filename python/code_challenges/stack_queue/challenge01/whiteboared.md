@@ -1,0 +1,1 @@
+![image](./Stack%20and%20queue.png)
