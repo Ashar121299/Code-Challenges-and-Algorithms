@@ -1,0 +1,1 @@
+![image](./Repeated%20Word.png)
